@@ -1,0 +1,16 @@
+<div class="gallery">
+
+    <div class="photos" >
+        <figure *ngFor="let photo of arrayOfPhotos; let i = index">
+            <i class="far fa-times-circle" (click)="deletePhoto(i, photo, $event)"></i>
+            <img [src]=getSantizeUrl(photo.url) alt="">
+            <figcaption>{{ photo.name }}</figcaption>
+        </figure>
+    </div>
+    
+
+    <div class="button">
+        <input (change)="uploadFile($event)" type="file" multiple name="productImage" id="productImage" value="Вибрати фото">
+        <label class="custom-file-label" style="width: 105.5%;" for="productImage">Виберіть фото для загрузки...</label>
+      </div>
+</div>

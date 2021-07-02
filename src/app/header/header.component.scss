@@ -1,0 +1,24 @@
+ul{
+	height: 5vh;
+    border-bottom: 1px solid darkgray;
+    background-color: rgba(36, 35, 35, 0.788);
+   display: flex;
+   flex-direction: row;
+   justify-content: space-around;
+   align-items: center;
+   font-family: 'Caveat-Regular', cursive;
+   font-size: 35px;
+   color: blanchedalmond;
+
+}
+
+
+a{
+
+
+    &:visited{
+    text-decoration: none;
+    color: whitesmoke;
+}
+}
+

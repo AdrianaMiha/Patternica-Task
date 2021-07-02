@@ -1,0 +1,119 @@
+@import '../../assets/styles/fonts';
+
+.body{
+    width: 100%;
+    height: 95vh;
+    background-image: url(../../assets/images/blur-supermarket-aisle-with-empty-red-shopping-cart_56345-232.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+}
+
+.shopList{
+    width: 450px;
+    min-height: 550px;
+    background-image: url(../../assets/images/Daco_22222.png);
+    background-size: cover;
+    padding: 190px 0px 30px 100px;
+    &__list{
+        width: 350px;
+        min-height: 370px;
+        background-color: rgba(255, 0, 0, 0);
+        font-family: 'Caveat-Regular', cursive;
+        font-size: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
+
+h2{
+    font-size: 24px;
+    font-family: 'Caveat-Bold', cursive;
+    text-align: center;
+}
+
+h3{
+    font-family: 'Caveat-SemiBold', cursive;
+    margin-bottom: 15px;
+}
+
+.filter{
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+margin-right: 25px;
+}
+
+.chooseFilter{
+    font-size: 15px;
+    margin: 15px 0 -10px;
+    color: rgb(65, 65, 65);
+    cursor: pointer;
+    &:hover{
+        color: darkred;
+        transform: scale(1.4);
+        text-decoration: underline;
+    }
+}
+
+.active{
+    color: darkred;
+    text-decoration: underline;
+}
+
+table, caption, tbody{
+    width: 100%;
+    color: rgb(65, 65, 65);
+    margin-bottom: 25px;
+}
+
+.trStyle{
+    text-decoration: line-through;
+}
+
+#delete{
+    font-size: 13px;
+    margin-right: 10px;
+    display: block;
+    cursor: pointer;
+    &:hover{
+        color: darkred;
+    }
+}
+td{
+    vertical-align: middle;
+}
+
+input{
+    font-family: 'Caveat-Bold', cursive;
+    cursor: pointer;
+}
+
+#prod{
+    padding-left: 10px;
+    width: 150px;
+}
+
+#count{
+    padding-left: 10px;
+    width: 90px;
+}
+
+#button{
+    width: 90px;
+}
+
+#checkAll{
+    width: 21px;
+    height: 21px;
+    margin-left: 1px;
+}
+
+#delAll{
+    font-size: 21px;
+    color: darkred;
+    margin-left: -3px;
+    font-weight: 600;
+    cursor: pointer;
+}

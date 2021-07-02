@@ -1,0 +1,51 @@
+<div class="body">
+    <div class="shopList">
+        <div class="shopList__list">
+            <table>
+                <caption>
+                    <h2>Список продуктів:</h2>
+                    <div class="filter">
+                        <a class="chooseFilter active" (click)="filterBy('', $event)" >Весь список</a>
+                        <a class="chooseFilter" (click)="filterBy('toBuy', $event)">Необхідно купити</a>
+                        <a class="chooseFilter" (click)="filterBy('wasBought', $event)">Куплено</a>
+                    </div>
+                </caption>
+                <tbody *ngIf="show">
+                    <tr *ngFor="let food of foodList | filter:chosenFilter; let i=index">
+                        <td>{{ i+1 }}</td>
+                        <td [ngClass]="{'trStyle': food.isReady}" id="prodName">{{ food.name | titlecase }} </td>
+                        <td>{{ food.countBought }} / {{ food.countNeeded }}</td>
+                        <td>
+                        <td><input type="checkbox" [checked]="food.isReady" name="" id="" (click)="changeStatus(food)">
+                        </td>
+                        <td><i class="far fa-trash-alt" id="delete" (click)="deleteProduct(i)"></i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>
+                        <td><input type="checkbox" name="" id="checkAll" (click)="checkAll()">
+                        </td>
+                        <td><i class="far fa-trash-alt" id="delAll" (click)="deleteAllProducts()"></i>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div>
+                <h3 *ngIf="show">Залишилось купити: {{ listToBuy.length }} </h3>
+                <h3 *ngIf="!show">Запишіть у список необхідні продукти: </h3>
+
+
+                <form>
+                    <input type="text" [(ngModel)]="prod" name="prod" placeholder="Назва продукту" id="prod">
+                    <input type="text" [(ngModel)]="count" name="count" placeholder="Кількість" id="count">
+                    <input type="button" value="Записати" (click)="addProd()" id="button">
+                </form>
+            </div>
+        </div>
+
+    </div>
+</div>
