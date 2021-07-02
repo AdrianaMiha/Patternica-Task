@@ -1,0 +1,2 @@
+# Patternica-Task
+ToDoApp + PhotoLibrary
